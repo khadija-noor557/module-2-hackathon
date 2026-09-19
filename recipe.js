@@ -30,7 +30,8 @@ async function uploadRecipeImage(file) {
 
 
 // ---- Post save karne wala main function ----
-async function saveRecipe() {
+async function saveRecipe(status) {
+    console.log(status)
 
     try {
 
@@ -116,10 +117,31 @@ async function saveRecipe() {
 // ---- Publish button ----
 const recipeForm = document.getElementById("recipeForm");
 
-recipeForm.addEventListener("click", function (e) {
+
+recipeForm.addEventListener("submit", function (e) {
 
     e.preventDefault();
     saveRecipe();
 
 });
 
+/// Image preview
+
+const recipeImage = document.getElementById("recipeImage");
+const recipePreview = document.getElementById("recipePreview");
+const previewPlaceholder = document.getElementById("previewPlaceholder");
+
+if (recipeImage && recipePreview) {
+    recipeImage.addEventListener("change", () => {
+        const file = recipeImage.files[0];
+
+        if (file) {
+            recipePreview.src = URL.createObjectURL(file);
+            recipePreview.style.display = "block";
+
+            if (previewPlaceholder) {
+                previewPlaceholder.style.display = "none";
+            }
+        }
+    });
+}

@@ -821,6 +821,19 @@ body {
     color: var(--green-dark);
 }
 
+#recipePost {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.dashboard-recipe-card {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+}
+
 
 /* ADD RECIPE SECTION */
 
@@ -905,6 +918,18 @@ body {
 
 
 /* RESPONSIVE DESIGN */
+
+@media (max-width: 992px) {
+    #recipePost {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    #recipePost {
+        grid-template-columns: 1fr;
+    }
+}
 
 @media (max-width: 991px) {
 

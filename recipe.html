@@ -205,7 +205,7 @@ Step 4: Serve and enjoy!" required></textarea>
 
                         <input type="file" class="form-control" id="recipeImage" name="recipeImage" accept="image/*">
 
-                        <div class="image-preview-placeholder">
+                        <div class="image-preview-placeholder" id="previewPlaceholder">
                             <div class="upload-icon">🖼️</div>
 
                             <h5>Your image will go here</h5>
@@ -213,6 +213,7 @@ Step 4: Serve and enjoy!" required></textarea>
                             <p>
                                 Choose an image using the upload field above.
                             </p>
+                            <img id="recipePreview" class="img-fluid rounded mt-3" style="display:none;" alt="Recipe preview">
                         </div>
 
                         <small class="form-help">
@@ -287,7 +288,7 @@ Step 4: Serve and enjoy!" required></textarea>
                     Clear Form
                 </button>
 
-                <button type="button" class="btn btn-publish" id="publishBtn">
+                <button type="submit" class="btn btn-publish" id="publishBtn" >
                     Publish Recipe →
                 </button>
 
@@ -302,6 +303,9 @@ Step 4: Serve and enjoy!" required></textarea>
     <footer class="recipe-editor-footer">
         <p>© 2026 RecipeShare. Made with love for food lovers. 💚</p>
     </footer>
+
+     <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- supabase -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
