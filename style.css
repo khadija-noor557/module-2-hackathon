@@ -835,6 +835,7 @@ body {
 }
 
 
+
 /* ADD RECIPE SECTION */
 
 .add-recipe-section {
@@ -878,6 +879,53 @@ body {
     color: var(--muted);
     font-size: 0.87rem;
     line-height: 1.7;
+}
+
+.dashboard-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #eef0ee;
+}
+
+.dashboard-card-actions .action-view {
+  flex-grow: 1;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 8px 14px;
+}
+
+.action-btn {
+  border: 0;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.action-edit {
+  background: #eef2ff;
+  color: #4338ca;
+}
+.action-edit:hover {
+  background: #e0e7ff;
+}
+
+.action-delete {
+  background: #fef2f2;
+  color: #dc2626;
+}
+.action-delete:hover {
+  background: #fee2e2;
 }
 
 

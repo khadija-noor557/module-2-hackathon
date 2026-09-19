@@ -108,19 +108,19 @@ if (window.location.pathname.endsWith("/dashboard.html")) {
 
         <div class="dashboard-card-actions">
 
-            <a href="index.html#recipes" class="btn btn-outline-success">
-                View Recipe
-            </a>
+    <a href="index.html#recipes" class="btn btn-success btn-sm action-view">
+        👁 View
+    </a>
 
-            <button class="edit-action" onclick="update('${recipePost.id}')">
-                Edit
-            </button>
+    <button type="button" class="action-btn action-edit" onclick="update('${recipePost.id}')">
+        ✏️ Edit
+    </button>
 
-            <button onclick="removePost('${recipePost.id}')">
-                Delete
-            </button>
+    <button type="button" class="action-btn action-delete" onclick="removePost('${recipePost.id}')">
+        🗑 Delete
+    </button>
 
-        </div>
+</div>
     </div>
 `;
 

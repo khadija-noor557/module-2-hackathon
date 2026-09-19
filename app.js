@@ -56,7 +56,7 @@ if (signUpForm) {
             console.log("SESSION:", data.session);
 
             if (data.session) {
-                // Session ban gaya, seedha dashboard
+                
                 await Swal.fire({
                     title: "Registration successful!",
                     icon: "success",
@@ -65,7 +65,7 @@ if (signUpForm) {
                 });
                 window.location.href = "dashboard.html";
             } else {
-                // Email confirmation on hai
+                
                 await Swal.fire({
                     icon: "info",
                     title: "Check your email",
