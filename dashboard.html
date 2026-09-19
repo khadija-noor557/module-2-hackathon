@@ -1,387 +1,398 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Dashboard | RecipeShare</title>
+    <title>Dashboard | RecipeShare</title>
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="style.css">
-    </head>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body class="dashboard-page">
+<body class="dashboard-page">
 
-        <!-- NAVBAR -->
-        <nav class="navbar bg-white border-bottom sticky-top">
-            <div class="container-fluid px-lg-4">
+    <!-- NAVBAR -->
+    <nav class="navbar bg-white border-bottom sticky-top">
+        <div class="container-fluid px-lg-4">
+
+            <div class="d-flex align-items-center gap-2">
+
+                <button class="menu-toggle d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-label="Open menu">
+                    ☰
+                </button>
 
                 <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-
                     <span class="brand-icon">♧</span>
                     RecipeShare
-
                 </a>
 
-                <div class="d-flex align-items-center gap-3">
+            </div>
 
-                    <span class="small text-secondary d-none d-sm-inline" id="navName">
-                        Welcome, Food Lover!
-                    </span>
+            <div class="d-flex align-items-center gap-3">
 
-                    <div class="profile-avatar" id="navAvatar">
-                        K
+                <span class="small text-secondary d-none d-sm-inline" id="navName">
+                    Welcome, Food Lover!
+                </span>
+
+                <div class="profile-avatar" id="navAvatar">
+                    K
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- SIDEBAR -->
+            <aside class="offcanvas-lg offcanvas-start col-lg-2 dashboard-sidebar" tabindex="-1" id="sidebarMenu"
+                aria-labelledby="sidebarMenuLabel">
+
+                <!-- Ye header sirf mobile par dikhta hai -->
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title fw-bold" id="sidebarMenuLabel">♧ RecipeShare</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body flex-column">
+
+                    <div class="sidebar-heading">MENU</div>
+
+                    <a href="dashboard.html" class="sidebar-link active">
+                        <span>▦</span> Dashboard
+                    </a>
+
+                    <a href="index.html#recipes" class="sidebar-link">
+                        <span>♧</span> All Recipes
+                    </a>
+
+                    <a href="#my-recipes" class="sidebar-link">
+                        <span>♡</span> My Recipes
+                    </a>
+
+                    <a href="#categories" class="sidebar-link">
+                        <span>▤</span> Categories
+                    </a>
+
+                    <div class="sidebar-bottom">
+                        <button type="button" class="logout-btn" id="logoutBtn">
+                            <span class="logout-icon">↪</span>
+                            Logout
+                        </button>
                     </div>
 
                 </div>
 
-            </div>
-        </nav>
+            </aside>
 
 
-        <div class="container-fluid">
-            <div class="row">
+            <!-- MAIN CONTENT -->
+            <main class="col-lg-10 dashboard-main">
 
-                <!-- SIDEBAR -->
-                <aside class="col-lg-2 dashboard-sidebar">
+                <!-- PAGE HEADING -->
+                <div class="dashboard-heading">
 
-                    <div class="sidebar-heading">
-                        MENU
+                    <div>
+                        <span class="eyebrow">YOUR PERSONAL SPACE</span>
+
+                        <h1>Dashboard</h1>
+
+                        <p>
+                            Manage your recipes and discover something delicious.
+                        </p>
                     </div>
 
-                    <a href="dashboard.html" class="sidebar-link active">
-                        <span>▦</span>
-                        Dashboard
+                    <a href="#add-recipe" class="btn btn-success">
+                        + Add New Recipe
                     </a>
 
-                    <a href="index.html#recipes" class="sidebar-link">
-                        <span>♧</span>
-                        All Recipes
-                    </a>
+                </div>
 
-                    <a href="#my-recipes" class="sidebar-link">
-                        <span>♡</span>
-                        My Recipes
-                    </a>
 
-                    <a href="#categories" class="sidebar-link">
-                        <span>▤</span>
-                        Categories
-                    </a>
+                <!-- WELCOME BANNER -->
+                <section class="welcome-banner">
 
-                    <div class="sidebar-bottom">
+                    <div class="welcome-content" id="userDashboard">
 
-                        <button type="click" class="logout-btn"  id="logoutBtn">
-                            <span class="logout-icon">↪</span>
-                            Logout
-                        </button>
+                        <span class="welcome-label">
+                            WELCOME BACK 👋
+                        </span>
+
+                        <h2>Hello, <span id="userName"></span> !</h2>
+
+                        <p>
+                            Ready to share something delicious today?
+                            Your next favorite recipe starts here.
+                        </p>
+
+                        <a href="#add-recipe" class="btn btn-light mt-2">
+                            Share a Recipe →
+                        </a>
 
                     </div>
 
-                </aside>
+                    <div class="welcome-decoration">
+                        🍲
+                    </div>
+
+                </section>
 
 
-                <!-- MAIN CONTENT -->
-                <main class="col-lg-10 dashboard-main">
+                <!-- STATISTICS -->
+                <section class="stats-section">
 
-                    <!-- PAGE HEADING -->
-                    <div class="dashboard-heading">
+                    <div class="row g-3">
 
-                        <div>
-                            <span class="eyebrow">YOUR PERSONAL SPACE</span>
+                        <div class="col-6 col-xl-3">
 
-                            <h1>Dashboard</h1>
+                            <div class="stat-card">
 
-                            <p>
-                                Manage your recipes and discover something delicious.
-                            </p>
+                                <div class="stat-icon icon-green">
+                                    ♧
+                                </div>
+
+                                <p>Total Recipes</p>
+
+                                <h3>12</h3>
+
+                                <span>Recipes you've shared</span>
+
+                            </div>
+
                         </div>
 
-                        <a href="#add-recipe" class="btn btn-success">
-                            + Add New Recipe
+
+                        <div class="col-6 col-xl-3">
+
+                            <div class="stat-card">
+
+                                <div class="stat-icon icon-orange">
+                                    ♨
+                                </div>
+
+                                <p>Categories</p>
+
+                                <h3>6</h3>
+
+                                <span>Food categories</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-6 col-xl-3">
+
+                            <div class="stat-card">
+
+                                <div class="stat-icon icon-purple">
+                                    ◷
+                                </div>
+
+                                <p>Recent Recipes</p>
+
+                                <h3>4</h3>
+
+                                <span>Recently added</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-6 col-xl-3">
+
+                            <div class="stat-card">
+
+                                <div class="stat-icon icon-pink">
+                                    ♡
+                                </div>
+
+                                <p>Saved Recipes</p>
+
+                                <h3>8</h3>
+
+                                <span>Your favorites</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- RECENT RECIPES -->
+                <section class="dashboard-recipes" id="my-recipes">
+
+                    <div class="dashboard-section-heading">
+
+                        <div>
+                            <span class="eyebrow">YOUR KITCHEN</span>
+
+                            <h2>Recent Recipes</h2>
+                        </div>
+
+                        <a href="index.html#recipes">
+                            View All →
                         </a>
 
                     </div>
 
 
-                    <!-- WELCOME BANNER -->
-                    <section class="welcome-banner">
+                    <div class="row g-4 mt-1">
 
-                        <div class="welcome-content" id="userDashboard">
-
-                            <span class="welcome-label">
-                                WELCOME BACK 👋
-                            </span>
-
-                            <h2>Hello, <span id="userName"></span> !</h2>
-
-                            <p>
-                                Ready to share something delicious today?
-                                Your next favorite recipe starts here.
-                            </p>
-
-                            <a href="#add-recipe" class="btn btn-light mt-2">
-                                Share a Recipe →
-                            </a>
-
-                        </div>
-
-                        <div class="welcome-decoration">
-                            🍲
-                        </div>
-
-                    </section>
+                        <!-- RECIPE 1 -->
+                        <div class="col-md-6 col-xl-4" id="recipePost">
 
 
-                    <!-- STATISTICS -->
-                    <section class="stats-section">
-
-                        <div class="row g-3">
-
-                            <div class="col-6 col-xl-3">
-
-                                <div class="stat-card">
-
-                                    <div class="stat-icon icon-green">
-                                        ♧
-                                    </div>
-
-                                    <p>Total Recipes</p>
-
-                                    <h3>12</h3>
-
-                                    <span>Recipes you've shared</span>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="col-6 col-xl-3">
-
-                                <div class="stat-card">
-
-                                    <div class="stat-icon icon-orange">
-                                        ♨
-                                    </div>
-
-                                    <p>Categories</p>
-
-                                    <h3>6</h3>
-
-                                    <span>Food categories</span>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="col-6 col-xl-3">
-
-                                <div class="stat-card">
-
-                                    <div class="stat-icon icon-purple">
-                                        ◷
-                                    </div>
-
-                                    <p>Recent Recipes</p>
-
-                                    <h3>4</h3>
-
-                                    <span>Recently added</span>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="col-6 col-xl-3">
-
-                                <div class="stat-card">
-
-                                    <div class="stat-icon icon-pink">
-                                        ♡
-                                    </div>
-
-                                    <p>Saved Recipes</p>
-
-                                    <h3>8</h3>
-
-                                    <span>Your favorites</span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </section>
-
-
-                    <!-- RECENT RECIPES -->
-                    <section class="dashboard-recipes" id="my-recipes">
-
-                        <div class="dashboard-section-heading">
-
-                            <div>
-                                <span class="eyebrow">YOUR KITCHEN</span>
-
-                                <h2>Recent Recipes</h2>
-                            </div>
-
-                            <a href="index.html#recipes">
-                                View All →
-                            </a>
 
                         </div>
 
 
-                        <div class="row g-4 mt-1">
-
-                            <!-- RECIPE 1 -->
-                            <div class="col-md-6 col-xl-4" id="recipePost">
-
-                                
-
-                            </div>
+                        <!-- RECIPE 2 -->
 
 
-                            <!-- RECIPE 2 -->
-                            
+
+                        <!-- RECIPE 3 -->
 
 
-                            <!-- RECIPE 3 -->
-                            
+                    </div>
 
+                </section>
+
+
+                <!-- ADD RECIPE PLACEHOLDER -->
+                <section class="add-recipe-section" id="add-recipe">
+
+                    <div class="add-recipe-box">
+
+                        <div class="add-recipe-icon">
+                            +
                         </div>
 
-                    </section>
+                        <h2>Share Your Next Recipe</h2>
+
+                        <p>
+                            Have a delicious recipe to share?
+                            Add it to your collection and inspire others.
+                        </p>
+
+                        <a href="recipe.html" class="btn btn-success">
+                            Get Started →
+                        </a>
+
+                    </div>
+
+                </section>
 
 
-                    <!-- ADD RECIPE PLACEHOLDER -->
-                    <section class="add-recipe-section" id="add-recipe">
+                <!-- CATEGORIES -->
+                <section class="dashboard-categories" id="categories">
 
-                        <div class="add-recipe-box">
+                    <div class="dashboard-section-heading">
 
-                            <div class="add-recipe-icon">
-                                +
-                            </div>
+                        <div>
+                            <span class="eyebrow">EXPLORE SOMETHING NEW</span>
 
-                            <h2>Share Your Next Recipe</h2>
-
-                            <p>
-                                Have a delicious recipe to share?
-                                Add it to your collection and inspire others.
-                            </p>
-
-                            <a href="recipe.html" class="btn btn-success">
-                                Get Started →
-                            </a>
-
+                            <h2>Explore Categories</h2>
                         </div>
 
-                    </section>
+                    </div>
 
 
-                    <!-- CATEGORIES -->
-                    <section class="dashboard-categories" id="categories">
+                    <div class="row g-3 mt-2">
 
-                        <div class="dashboard-section-heading">
-
-                            <div>
-                                <span class="eyebrow">EXPLORE SOMETHING NEW</span>
-
-                                <h2>Explore Categories</h2>
+                        <div class="col-6 col-md-4 col-xl-2">
+                            <div class="mini-category">
+                                <span>🍲</span>
+                                <h3>Pakistani</h3>
                             </div>
-
                         </div>
 
-
-                        <div class="row g-3 mt-2">
-
-                            <div class="col-6 col-md-4 col-xl-2">
-                                <div class="mini-category">
-                                    <span>🍲</span>
-                                    <h3>Pakistani</h3>
-                                </div>
+                        <div class="col-6 col-md-4 col-xl-2">
+                            <div class="mini-category">
+                                <span>🍝</span>
+                                <h3>Italian</h3>
                             </div>
-
-                            <div class="col-6 col-md-4 col-xl-2">
-                                <div class="mini-category">
-                                    <span>🍝</span>
-                                    <h3>Italian</h3>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-xl-2">
-                                <div class="mini-category">
-                                    <span>🥡</span>
-                                    <h3>Chinese</h3>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-xl-2">
-                                <div class="mini-category">
-                                    <span>🧁</span>
-                                    <h3>Desserts</h3>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-xl-2">
-                                <div class="mini-category">
-                                    <span>🍔</span>
-                                    <h3>Fast Food</h3>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-xl-2">
-                                <div class="mini-category">
-                                    <span>🥗</span>
-                                    <h3>Healthy</h3>
-                                </div>
-                            </div>
-
                         </div>
 
-                    </section>
+                        <div class="col-6 col-md-4 col-xl-2">
+                            <div class="mini-category">
+                                <span>🥡</span>
+                                <h3>Chinese</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-xl-2">
+                            <div class="mini-category">
+                                <span>🧁</span>
+                                <h3>Desserts</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-xl-2">
+                            <div class="mini-category">
+                                <span>🍔</span>
+                                <h3>Fast Food</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-xl-2">
+                            <div class="mini-category">
+                                <span>🥗</span>
+                                <h3>Healthy</h3>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
 
 
-                </main>
+            </main>
 
-            </div>
         </div>
+    </div>
 
 
-        <!-- FOOTER -->
-        <footer class="footer">
-            <div class="container-fluid px-lg-4 d-flex justify-content-between flex-wrap gap-2">
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container-fluid px-lg-4 d-flex justify-content-between flex-wrap gap-2">
 
-                <strong>♧ RecipeShare</strong>
+            <strong>♧ RecipeShare</strong>
 
-                <span>Made for people who love sharing good food.</span>
+            <span>Made for people who love sharing good food.</span>
 
-            </div>
-        </footer>
+        </div>
+    </footer>
 
-        <!-- supabase -->
+    <!-- supabase -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <!-- sweetalert -->
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
-        <!-- Bootstrap JS for responsive navbar -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS for responsive navbar -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-        <script src="logout.js"></script>
+    <script src="logout.js"></script>
 
-    </body>
+</body>
 
-    </html>
+</html>
