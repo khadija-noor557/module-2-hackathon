@@ -90,7 +90,7 @@ console.log("SESSION:", data.session);
 
 
     
-    window.location.href = "./dashboard.html";
+    window.location.href = "dashboard.html";
 });
 }
 

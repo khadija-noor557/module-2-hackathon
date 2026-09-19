@@ -8,6 +8,9 @@ const client = createClient(supabaseUrl, supabaseKey)
 console.log(client);
 
 
+
+
+
 // logout btn
 const logOutBtn = document.querySelector("#logoutBtn")
 logOutBtn.addEventListener("click", async () => {
@@ -27,18 +30,24 @@ logOutBtn.addEventListener("click", async () => {
 
 // get user name on main section
 const userDashboard = document.querySelector("#userDashboard");
+console.log(userDashboard)
 
 async function getUserData() {
 
   const { data: { user }, error } = await client.auth.getUser();
 
-  if (error) {
-    console.log(error.message);
+  if (error || !user) {
+    window.location.href = "login.html";
     return;
   }
 
+
   if (user) {
-    document.querySelector("#userName").textContent = user.user_metadata.name;;
+    const name = user.user_metadata?.name || user.email.split("@")[0];
+
+    document.querySelector("#userName").textContent = name;
+    document.querySelector("#navName").textContent = `Welcome, ${name}!`;
+    document.querySelector("#navAvatar").textContent = name.charAt(0).toUpperCase();
   }
 }
 
