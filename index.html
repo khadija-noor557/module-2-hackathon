@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RecipeShare | Share Your Favorite Recipes</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="brand-icon">♧</span>
+                RecipeShare
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-lg-4 me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#recipes">All Recipes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Dashboard</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex gap-2">
+                    <a href="login.html" class="btn btn-outline-success">Login</a>
+                    <a href="signup.html" class="btn btn-success">Sign Up</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center g-4">
+
+                <div class="col-lg-6">
+
+                    <span class="eyebrow">GOOD FOOD. GOOD MOOD.</span>
+
+                    <h1>
+                        Share Your
+                        <span>Favorite Recipes.</span>
+                    </h1>
+
+                    <p class="hero-text">
+                        Discover, create and share delicious recipes
+                        with a community that loves food as much as you do.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                        <a href="#recipes" class="btn btn-success btn-lg">
+                            Explore Recipes
+                        </a>
+
+                        <a href="signup.html" class="btn btn-outline-success btn-lg">
+                            Join the Community
+                        </a>
+                    </div>
+
+                    <p class="hero-note mt-4">
+                        ♡ Made for food lovers, by food lovers.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-6">
+                    <img src="images/food-hero.svg" class="hero-image" alt="Delicious meal illustration">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="container section-space" id="categories">
+
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">FIND YOUR CRAVING</span>
+                <h2>Popular Categories</h2>
+            </div>
+
+            <a href="#recipes" class="text-success text-decoration-none fw-semibold">
+                Browse All →
+            </a>
+        </div>
+
+        <div class="row g-3 mt-2">
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#recipes" class="category-tile">
+                    <span>🍲</span>
+                    Pakistani
+                </a>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#recipes" class="category-tile">
+                    <span>🍝</span>
+                    Italian
+                </a>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#recipes" class="category-tile">
+                    <span>🥡</span>
+                    Chinese
+                </a>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#recipes" class="category-tile">
+                    <span>🧁</span>
+                    Desserts
+                </a>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#recipes" class="category-tile">
+                    <span>🍔</span>
+                    Fast Food
+                </a>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#recipes" class="category-tile">
+                    <span>🥗</span>
+                    Healthy
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- RECIPES -->
+    <section class="container section-space" id="recipes">
+
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">A LITTLE INSPIRATION</span>
+                <h2>Recently Shared Recipes</h2>
+            </div>
+
+            <a href="signup.html" class="text-success text-decoration-none fw-semibold">
+                Share Your Own →
+            </a>
+        </div>
+
+        <div class="row g-4 mt-1">
+
+            <!-- Recipe 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="recipe-card">
+
+                    <img src="https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=900&q=85"
+                        alt="Chicken biryani">
+
+                    <div class="recipe-content">
+
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="category-badge">Pakistani</span>
+                            <span class="recipe-time">⏱ 75 min</span>
+                        </div>
+
+                        <h3>Chicken Biryani</h3>
+
+                        <p>
+                            A fragrant classic with aromatic spices,
+                            tender chicken and fluffy rice.
+                        </p>
+
+                        <div class="recipe-footer">
+                            <span>By RecipeShare Cook</span>
+                            <span>♡ Save</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Recipe 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="recipe-card">
+
+                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=85"
+                        alt="Pasta">
+
+                    <div class="recipe-content">
+
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="category-badge">Italian</span>
+                            <span class="recipe-time">⏱ 30 min</span>
+                        </div>
+
+                        <h3>Creamy Pasta</h3>
+
+                        <p>
+                            A cozy and creamy pasta dish for an
+                            easy and delicious dinner.
+                        </p>
+
+                        <div class="recipe-footer">
+                            <span>By RecipeShare Cook</span>
+                            <span>♡ Save</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Recipe 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="recipe-card">
+
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85"
+                        alt="Chocolate cake">
+
+                    <div class="recipe-content">
+
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="category-badge">Desserts</span>
+                            <span class="recipe-time">⏱ 55 min</span>
+                        </div>
+
+                        <h3>Chocolate Cake</h3>
+
+                        <p>
+                            A rich chocolate treat that's perfect
+                            for a sweet little celebration.
+                        </p>
+
+                        <div class="recipe-footer">
+                            <span>By RecipeShare Cook</span>
+                            <span>♡ Save</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- JOIN SECTION -->
+    <section class="container section-space">
+
+        <div class="join-banner">
+
+            <div>
+                <span class="eyebrow">YOUR RECIPES DESERVE TO BE SHARED</span>
+
+                <h2>Have a Delicious Recipe?</h2>
+
+                <p>
+                    Join RecipeShare and inspire someone’s next meal.
+                </p>
+            </div>
+
+            <a href="signup.html" class="btn btn-light btn-lg">
+                Create an Account →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container d-flex justify-content-between flex-wrap gap-2">
+
+            <strong>♧ RecipeShare</strong>
+
+            <span>Made for people who love sharing good food.</span>
+
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS for responsive navbar -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

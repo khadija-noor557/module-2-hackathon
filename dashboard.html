@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | RecipeShare</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- NAVBAR -->
+    <nav class="navbar bg-white border-bottom sticky-top">
+        <div class="container-fluid px-lg-4">
+
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+
+                <span class="brand-icon">♧</span>
+                RecipeShare
+
+            </a>
+
+            <div class="d-flex align-items-center gap-3">
+
+                <span class="small text-secondary d-none d-sm-inline">
+                    Welcome, Food Lover!
+                </span>
+
+                <div class="profile-avatar">
+                    K
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- SIDEBAR -->
+            <aside class="col-lg-2 dashboard-sidebar">
+
+                <div class="sidebar-heading">
+                    MENU
+                </div>
+
+                <a href="dashboard.html" class="sidebar-link active">
+                    <span>▦</span>
+                    Dashboard
+                </a>
+
+                <a href="index.html#recipes" class="sidebar-link">
+                    <span>♧</span>
+                    All Recipes
+                </a>
+
+                <a href="#my-recipes" class="sidebar-link">
+                    <span>♡</span>
+                    My Recipes
+                </a>
+
+                <a href="#categories" class="sidebar-link">
+                    <span>▤</span>
+                    Categories
+                </a>
+
+                <div class="sidebar-bottom">
+
+                    <button type="submit" class="logout-btn" onclick="window.location.href='index.html'">
+                        <span class="logout-icon">↪</span>
+                        Logout
+                    </button>
+
+                </div>
+
+            </aside>
+
+
+            <!-- MAIN CONTENT -->
+            <main class="col-lg-10 dashboard-main">
+
+                <!-- PAGE HEADING -->
+                <div class="dashboard-heading">
+
+                    <div>
+                        <span class="eyebrow">YOUR PERSONAL SPACE</span>
+
+                        <h1>Dashboard</h1>
+
+                        <p>
+                            Manage your recipes and discover something delicious.
+                        </p>
+                    </div>
+
+                    <a href="#add-recipe" class="btn btn-success">
+                        + Add New Recipe
+                    </a>
+
+                </div>
+
+
+                <!-- WELCOME BANNER -->
+                <section class="welcome-banner">
+
+                    <div class="welcome-content">
+
+                        <span class="welcome-label">
+                            WELCOME BACK 👋
+                        </span>
+
+                        <h2>Hello, Khadija!</h2>
+
+                        <p>
+                            Ready to share something delicious today?
+                            Your next favorite recipe starts here.
+                        </p>
+
+                        <a href="#add-recipe" class="btn btn-light mt-2">
+                            Share a Recipe →
+                        </a>
+
+                    </div>
+
+                    <div class="welcome-decoration">
+                        🍲
+                    </div>
+
+                </section>
+
+
+                <!-- STATISTICS -->
+                <section class="stats-section">
+
+                    <div class="row g-3">
+
+                        <div class="col-6 col-xl-3">
+
+                            <div class="stat-card">
+
+                                <div class="stat-icon icon-green">
+                                    ♧
+                                </div>
+
+                                <p>Total Recipes</p>
+
+                                <h3>12</h3>
+
+                                <span>Recipes you've shared</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-6 col-xl-3">
+
+                            <div class="stat-card">
+
+                                <div class="stat-icon icon-orange">
+                                    ♨
+                                </div>
+
+                                <p>Categories</p>
+
+                                <h3>6</h3>
+
+                                <span>Food categories</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-6 col-xl-3">
+
+                            <div class="stat-card">
+
+                                <div class="stat-icon icon-purple">
+                                    ◷
+                                </div>
+
+                                <p>Recent Recipes</p>
+
+                                <h3>4</h3>
+
+                                <span>Recently added</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-6 col-xl-3">
+
+                            <div class="stat-card">
+
+                                <div class="stat-icon icon-pink">
+                                    ♡
+                                </div>
+
+                                <p>Saved Recipes</p>
+
+                                <h3>8</h3>
+
+                                <span>Your favorites</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- RECENT RECIPES -->
+                <section class="dashboard-recipes" id="my-recipes">
+
+                    <div class="dashboard-section-heading">
+
+                        <div>
+                            <span class="eyebrow">YOUR KITCHEN</span>
+
+                            <h2>Recent Recipes</h2>
+                        </div>
+
+                        <a href="index.html#recipes">
+                            View All →
+                        </a>
+
+                    </div>
+
+
+                    <div class="row g-4 mt-1">
+
+                        <!-- RECIPE 1 -->
+                        <div class="col-md-6 col-xl-4">
+
+                            <article class="dashboard-recipe-card">
+
+                                <div class="dashboard-recipe-image">
+
+                                    <img src="https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=800&q=85"
+                                        alt="Chicken biryani">
+
+                                    <span class="recipe-status">
+                                        Published
+                                    </span>
+
+                                </div>
+
+                                <div class="dashboard-recipe-content">
+
+                                    <span class="category-badge">
+                                        Pakistani
+                                    </span>
+
+                                    <h3>Chicken Biryani</h3>
+
+                                    <p>
+                                        A flavorful rice dish with aromatic spices
+                                        and tender chicken.
+                                    </p>
+
+                                    <div class="dashboard-recipe-meta">
+
+                                        <span>⏱ 75 min</span>
+
+                                        <span>📅 Sep 18, 2026</span>
+
+                                    </div>
+
+                                    <div class="dashboard-card-actions">
+
+                                        <a href="index.html#recipes" class="btn btn-outline-success">
+                                            View Recipe
+                                        </a>
+
+                                        <a href="#add-recipe" class="edit-action">
+                                            Edit
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- RECIPE 2 -->
+                        <div class="col-md-6 col-xl-4">
+
+                            <article class="dashboard-recipe-card">
+
+                                <div class="dashboard-recipe-image">
+
+                                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=85"
+                                        alt="Creamy pasta">
+
+                                    <span class="recipe-status">
+                                        Published
+                                    </span>
+
+                                </div>
+
+                                <div class="dashboard-recipe-content">
+
+                                    <span class="category-badge">
+                                        Italian
+                                    </span>
+
+                                    <h3>Creamy Pasta</h3>
+
+                                    <p>
+                                        Delicious creamy pasta with herbs
+                                        for an easy dinner.
+                                    </p>
+
+                                    <div class="dashboard-recipe-meta">
+
+                                        <span>⏱ 30 min</span>
+
+                                        <span>📅 Sep 16, 2026</span>
+
+                                    </div>
+
+                                    <div class="dashboard-card-actions">
+
+                                        <a href="index.html#recipes" class="btn btn-outline-success">
+                                            View Recipe
+                                        </a>
+
+                                        <a href="#add-recipe" class="edit-action">
+                                            Edit
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- RECIPE 3 -->
+                        <div class="col-md-6 col-xl-4">
+
+                            <article class="dashboard-recipe-card">
+
+                                <div class="dashboard-recipe-image">
+
+                                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=85"
+                                        alt="Chocolate cake">
+
+                                    <span class="recipe-status">
+                                        Published
+                                    </span>
+
+                                </div>
+
+                                <div class="dashboard-recipe-content">
+
+                                    <span class="category-badge">
+                                        Desserts
+                                    </span>
+
+                                    <h3>Chocolate Cake</h3>
+
+                                    <p>
+                                        A rich and soft chocolate cake
+                                        for a sweet celebration.
+                                    </p>
+
+                                    <div class="dashboard-recipe-meta">
+
+                                        <span>⏱ 55 min</span>
+
+                                        <span>📅 Sep 14, 2026</span>
+
+                                    </div>
+
+                                    <div class="dashboard-card-actions">
+
+                                        <a href="index.html#recipes" class="btn btn-outline-success">
+                                            View Recipe
+                                        </a>
+
+                                        <a href="#add-recipe" class="edit-action">
+                                            Edit
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ADD RECIPE PLACEHOLDER -->
+                <section class="add-recipe-section" id="add-recipe">
+
+                    <div class="add-recipe-box">
+
+                        <div class="add-recipe-icon">
+                            +
+                        </div>
+
+                        <h2>Share Your Next Recipe</h2>
+
+                        <p>
+                            Have a delicious recipe to share?
+                            Add it to your collection and inspire others.
+                        </p>
+
+                        <a href="recipe.html" class="btn btn-success">
+                            Get Started →
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+                <!-- CATEGORIES -->
+                <section class="dashboard-categories" id="categories">
+
+                    <div class="dashboard-section-heading">
+
+                        <div>
+                            <span class="eyebrow">EXPLORE SOMETHING NEW</span>
+
+                            <h2>Explore Categories</h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row g-3 mt-2">
+
+                        <div class="col-6 col-md-4 col-xl-2">
+                            <div class="mini-category">
+                                <span>🍲</span>
+                                <h3>Pakistani</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-xl-2">
+                            <div class="mini-category">
+                                <span>🍝</span>
+                                <h3>Italian</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-xl-2">
+                            <div class="mini-category">
+                                <span>🥡</span>
+                                <h3>Chinese</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-xl-2">
+                            <div class="mini-category">
+                                <span>🧁</span>
+                                <h3>Desserts</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-xl-2">
+                            <div class="mini-category">
+                                <span>🍔</span>
+                                <h3>Fast Food</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-xl-2">
+                            <div class="mini-category">
+                                <span>🥗</span>
+                                <h3>Healthy</h3>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+            </main>
+
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container-fluid px-lg-4 d-flex justify-content-between flex-wrap gap-2">
+
+            <strong>♧ RecipeShare</strong>
+
+            <span>Made for people who love sharing good food.</span>
+
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS for responsive navbar -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

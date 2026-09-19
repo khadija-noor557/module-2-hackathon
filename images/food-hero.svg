@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 470">
+
+    <defs>
+        <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fffdf4"></stop>
+            <stop offset="100%" stop-color="#e8f1df"></stop>
+        </linearGradient>
+
+        <linearGradient id="bowl" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#ffffff"></stop>
+            <stop offset="100%" stop-color="#d9e5d7"></stop>
+        </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect width="620" height="470" rx="38" fill="url(#background)"></rect>
+
+    <!-- Decorative circles -->
+    <circle cx="80" cy="82" r="22" fill="#d7e7d0"></circle>
+    <circle cx="536" cy="364" r="34" fill="#d7e7d0"></circle>
+    <circle cx="500" cy="78" r="13" fill="#d7e7d0"></circle>
+
+    <!-- Bowl shadow -->
+    <ellipse cx="321" cy="258" rx="218" ry="170" fill="#21382a" opacity="0.12"></ellipse>
+
+    <!-- Bowl -->
+    <ellipse cx="310" cy="237" rx="218" ry="174" fill="url(#bowl)" stroke="#d0dbd0" stroke-width="5"></ellipse>
+
+    <!-- Inner bowl -->
+    <ellipse cx="310" cy="222" rx="185" ry="139" fill="#3e2417"></ellipse>
+
+    <!-- Food base -->
+    <ellipse cx="310" cy="218" rx="169" ry="125" fill="#d8792c"></ellipse>
+
+    <!-- Pasta strands -->
+    <g fill="none" stroke="#f8d47d" stroke-width="13" stroke-linecap="round">
+
+        <path d="M180 180 C250 94 369 271 446 185
+                 S304 103 244 203 S371 300 416 208
+                 S271 111 206 195 S324 315 392 236"></path>
+
+        <path d="M190 241 C243 145 347 297 412 221
+                 S281 130 238 214 S344 307 402 240
+                 S296 135 228 195 S299 300 367 267"></path>
+
+        <path d="M218 130 C214 196 372 176 370 241
+                 S205 246 226 324 S375 318 365 249
+                 S240 196 218 260"></path>
+
+    </g>
+
+    <!-- Tomatoes -->
+    <g fill="#d83e27" stroke="#f58a5a" stroke-width="4">
+        <circle cx="239" cy="160" r="21"></circle>
+        <circle cx="366" cy="178" r="18"></circle>
+        <circle cx="291" cy="273" r="23"></circle>
+        <circle cx="408" cy="247" r="16"></circle>
+        <circle cx="191" cy="231" r="15"></circle>
+    </g>
+
+    <!-- Basil leaves -->
+    <g fill="#247b43">
+        <path d="M290 147 Q254 111 235 144 Q264 178 290 147"></path>
+        <path d="M300 145 Q306 104 342 115 Q337 152 300 145"></path>
+
+        <path d="M366 275 Q329 246 314 282 Q348 306 366 275"></path>
+        <path d="M378 277 Q395 238 425 258 Q409 292 378 277"></path>
+
+        <path d="M218 285 Q187 256 170 289 Q200 314 218 285"></path>
+        <path d="M220 283 Q232 246 263 261 Q253 294 220 283"></path>
+    </g>
+
+    <!-- Small decorative sparkles -->
+    <g fill="#fff4cf">
+        <path d="M145 114 L152 131 L169 138 L152 145 L145 162
+                 L138 145 L121 138 L138 131 Z"></path>
+
+        <path d="M484 157 L489 169 L501 174 L489 179 L484 191
+                 L479 179 L467 174 L479 169 Z"></path>
+
+        <circle cx="125" cy="350" r="5"></circle>
+        <circle cx="495" cy="300" r="7"></circle>
+    </g>
+
+</svg>
