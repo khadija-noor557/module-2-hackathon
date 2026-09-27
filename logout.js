@@ -55,6 +55,7 @@ getUserData();
 
 
 
+
 // get all data/card
 if (window.location.pathname.endsWith("/dashboard.html")) {
 
@@ -108,9 +109,13 @@ if (window.location.pathname.endsWith("/dashboard.html")) {
 
         <div class="dashboard-card-actions">
 
-    <a href="index.html#recipes" class="btn btn-success btn-sm action-view">
-        👁 View
-    </a>
+    <button
+                        type="button"
+                        class="view-recipe-btn view-recipe"
+                        data-id="${recipePost.id}"
+                    >
+                        View Recipe →
+                    </button>
 
     <button type="button" class="action-btn action-edit" onclick="update('${recipePost.id}')">
         ✏️ Edit
@@ -127,6 +132,23 @@ if (window.location.pathname.endsWith("/dashboard.html")) {
         recipeData.appendChild(card);
 
       });
+
+      // VIEW BUTTON
+      // VIEW BUTTON
+recipeData.addEventListener("click", function (e) {
+    const button = e.target.closest(".view-recipe");
+
+    if (!button) return;
+
+    const recipeId = button.dataset.id;
+
+    if (!recipeId) {
+        console.error("Recipe ID not found");
+        return;
+    }
+
+    openRecipeModal(recipeId);
+});
 
 
       // ---- EDIT ----
@@ -219,3 +241,4 @@ if (window.location.pathname.endsWith("/dashboard.html")) {
 
   getAllData();
 }
+

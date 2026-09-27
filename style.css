@@ -915,52 +915,66 @@ body {
 }
 
 .dashboard-card-actions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid #eef0ee;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #eef0ee;
 }
 
-.dashboard-card-actions .action-view {
-  flex-grow: 1;
-  border-radius: 10px;
-  font-weight: 600;
-  padding: 8px 14px;
+/* View Recipe */
+.dashboard-card-actions .view-recipe-btn {
+    flex: 1;
+    border: none;
+    border-radius: 10px;
+    padding: 9px 14px;
+    background: #e8f5eb;
+    color: var(--green);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
 }
 
-.action-btn {
-  border: 0;
-  border-radius: 10px;
-  padding: 8px 14px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+.dashboard-card-actions .view-recipe-btn:hover {
+    background: #dcefe1;
+    transform: translateY(-1px);
 }
 
-.action-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Edit & Delete */
+.dashboard-card-actions .action-btn {
+    border: none;
+    border-radius: 10px;
+    padding: 9px 13px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+    white-space: nowrap;
 }
 
-.action-edit {
-  background: #eef2ff;
-  color: #4338ca;
-}
-.action-edit:hover {
-  background: #e0e7ff;
+/* Edit */
+.dashboard-card-actions .action-edit {
+    background: #eef2ff;
+    color: #4338ca;
 }
 
-.action-delete {
-  background: #fef2f2;
-  color: #dc2626;
-}
-.action-delete:hover {
-  background: #fee2e2;
+.dashboard-card-actions .action-edit:hover {
+    background: #e0e7ff;
+    transform: translateY(-1px);
 }
 
+/* Delete */
+.dashboard-card-actions .action-delete {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.dashboard-card-actions .action-delete:hover {
+    background: #fee2e2;
+    transform: translateY(-1px);
+}
 
 /* CATEGORY MINI CARDS */
 
@@ -995,6 +1009,19 @@ body {
     font-size: 0.82rem;
     font-weight: 700;
     margin: 0;
+}
+
+
+/* view button responsive  */
+
+@media (max-width: 576px) {
+    .dashboard-card-actions {
+        flex-wrap: wrap;
+    }
+
+    .dashboard-card-actions .view-recipe-btn {
+        width: 100%;
+    }
 }
 
 

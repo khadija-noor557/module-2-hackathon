@@ -89,3 +89,22 @@
     font-size: 1.1rem;
     margin-bottom: 6px;
 }
+
+/* view recipe btn */
+.view-recipe-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: 1px solid #15915f;
+    border-radius: 9px;
+    background: white;
+    color: #15915f;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.view-recipe-btn:hover {
+    background: #15915f;
+    color: white;
+}
