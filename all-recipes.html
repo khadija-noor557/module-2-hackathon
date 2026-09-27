@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>All Recipes | RecipeShare</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS (site-wide) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Custom CSS (this page only) -->
+    <link rel="stylesheet" href="all-recipes.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="brand-icon">♧</span>
+                RecipeShare
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-lg-4 me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="all-recipes.html">All Recipes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#categories">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Dashboard</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex gap-2">
+                    <a href="login.html" class="btn btn-outline-success">Login</a>
+                    <a href="signup.html" class="btn btn-success">Sign Up</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- PAGE HERO -->
+    <section class="recipes-page-hero">
+        <div class="container">
+            <span class="eyebrow">BROWSE THE COMMUNITY</span>
+            <h1>All Recipes</h1>
+            <p>Search by name or filter by category to find your next favorite dish.</p>
+
+            <div class="search-bar">
+                <span>🔍</span>
+                <input type="text" id="searchInput" placeholder="Search recipes, e.g. biryani, pasta...">
+            </div>
+
+            <div class="filter-row" id="filterRow">
+                <button class="filter-chip active" data-cat="All">All</button>
+                <button class="filter-chip" data-cat="Pakistani">🍲 Pakistani</button>
+                <button class="filter-chip" data-cat="Italian">🍝 Italian</button>
+                <button class="filter-chip" data-cat="Chinese">🥡 Chinese</button>
+                <button class="filter-chip" data-cat="Desserts">🧁 Desserts</button>
+                <button class="filter-chip" data-cat="Fast Food">🍔 Fast Food</button>
+                <button class="filter-chip" data-cat="Healthy">🥗 Healthy</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- RECIPES GRID -->
+    <section class="container section-space">
+        <div class="row g-4" id="recipeGrid"></div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container d-flex justify-content-between flex-wrap gap-2">
+            <strong>♧ RecipeShare</strong>
+            <span>Made for people who love sharing good food.</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- This page's logic -->
+    <script src="all-recipes.js"></script>
+</body>
+
+</html>
